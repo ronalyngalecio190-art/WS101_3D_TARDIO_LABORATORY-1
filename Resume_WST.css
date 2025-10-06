@@ -1,0 +1,179 @@
+/* ===== General Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #1b3c6e; 
+  color: #4a4063;
+  line-height: 1.6;
+  padding: 10px;
+}
+
+/* ===== Resume Container ===== */
+.resume-container {
+  max-width: 1200px;
+  margin: auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e1e5eb;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #091661;
+}
+
+header .profile-img img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2c3e50;
+}
+
+header .header-text h1 {
+  font-size: 26px;
+  color: #2c3e50;
+}
+
+header .header-text h2 {
+  font-size: 18px;
+  color: #00796b; /* teal highlight */
+  margin: 5px 0 10px;
+}
+
+header .header-text p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===== Resume Layout ===== */
+.resume-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+/* ===== Card Sections ===== */
+.section-card {
+  background: #fff;
+  padding: 18px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid #e1e5eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Section Titles ===== */
+h3 {
+  background: #2c3e50; /* dark blue */
+  color: #21778d;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+/* ===== Skills ===== */
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill p {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.bar {
+  background: #012e4e;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #00796b, #2c3e50);
+}
+
+/* ===== Lists & Tables ===== */
+ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+li {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 4px 6px;
+  font-size: 14px;
+}
+
+/* ===== Responsive Grid ===== */
+
+/* Mobile */
+@media (max-width: 480px) {
+  .resume-content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  header .header-text h1 {
+    font-size: 22px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .resume-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Small desktop */
+@media (max-width: 1200px) {
+  .resume-content {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Large desktop (default) */
+@media (min-width: 1201px) {
+  .resume-content {
+    grid-template-columns: 1fr 2fr;
+  }
+}
